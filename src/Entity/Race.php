@@ -44,7 +44,7 @@ class Race
     private ?\DateTime $date = null;
 
     #[ORM\Column]
-    #[Groups(['race:read'])]
+    #[Groups(['race:read', 'race:write'])]
     private ?bool $archive = null;
 
     #[ORM\ManyToOne(inversedBy: 'races')]
